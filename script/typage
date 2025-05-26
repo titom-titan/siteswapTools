@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Typage automatique des séquences</title>
+  <style>
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; line-height: 1.5; color: #222; background-color: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { max-width: 100rem; margin: 1.5rem auto; padding: 0 1rem; font-size: 1rem; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.25; margin-top: 2rem; margin-bottom: 1rem; color: #111; }
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+p { margin-top: 1rem; margin-bottom: 1rem; }
+ul, ol { margin-top: 1rem; margin-bottom: 1rem; padding-left: 1.5rem; }
+a { color: #007acc; text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+textarea, input, button { font: inherit; margin: 0; padding: 0.5rem 0.75rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; transition: border-color 0.2s ease; }
+textarea { min-height: 8rem; resize: vertical; width: 100%; }
+input:focus, textarea:focus, button:focus { outline: none; border-color: #007acc; box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.3); }
+button { background-color: #007acc; color: white; cursor: pointer; border: none; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; user-select: none; transition: background-color 0.2s ease; }
+button:hover, button:focus { background-color: #005f99; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 1rem; }
+th, td { padding: 0.5rem 0.75rem; border: 1px solid #ddd; text-align: left; vertical-align: top; }
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; background-color: #f5f5f5; padding: 0.15rem 0.3rem; border-radius: 3px; font-size: 0.9rem; }
+pre { font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; background-color: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem; line-height: 1.4; margin-top: 1rem; margin-bottom: 1rem; }
+img { max-width: 100%; height: auto; display: block; margin-top: 1rem; margin-bottom: 1rem; }
+@media (max-width: 600px) { body { margin: 1rem; padding: 0 0.5rem; max-width: 100%; font-size: 0.95rem; } h1 { font-size: 1.75rem; } }
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.3em; }
+body { grid-template-columns: 1fr min(80rem, 80%) 1fr; font-size: 0.8em; }
+table { width: 100%; text-align: center;  }
+td { padding: 0.5em;border: 1px solid #ddd;font-family: monospace;background: rgb(var(--r), var(--g), var(--b));color: white;border-radius: 0.5em; }
+[type="type_partition"] { --r: 100; --g: 50;  --b: 250; }
+[type="type_spine"]     { --r: 100; --g: 200; --b: 100; }
+[type="type_nexus"]     { --r: 250; --g: 50;  --b: 100; }
+[type="type_mixed"]     { --r: 80;  --g: 80;  --b: 80;  }
+textarea { width: 100%;font-family: monospace;min-height: 5em; }
+.seed       { background: rgba(0,0,255,0.1); }
+.partition  { font-weight: bold; }
+.spine      { border-left: 3px solid teal; }
+.nexus      { background-color: #ffd; }
+.orbital    { outline: 2px dotted magenta; }
+#inputParams label, input       {display:inline}
+.tab-pane { display: none; margin-top: 1em; border: 1px solid #ccc; padding: 1em; border-radius: 6px; }
+.tab-pane.active { display: block; }
+textarea { width: 100%; height: 4em; }
+input[type="range"] { width: 100px; }
+.ui_entree{background:#def}
+#tabs {background: #000; padding: 1px 1px; border-radius: 0px; border-style: inset; user-select: none;}
+#tabs button {margin: 2px 2px; padding: 15px 20px 5px; background: #000; border: none; border-radius: 10px; color: #ddd; font-weight: 600; cursor: pointer; transition: background-color 0.25s ease, color 0.25s ease; border: 3px solid #000; border-style: inset;}
+#tabs button:hover {border: 3px solid #000; border-style: outset; background: #333;}
+#tabs button.active {background: #fff; color: #000; box-shadow: 0 0 8px #1e90ffaa;}
+  </style>
+</head>
+<body>
+<main>
+<article>
+<h1>Typage automatique des séquences</h1>
+<section class="ui_entree">
+<h2>Entrées</h2>
+<!-- Selecteur pour la méthode de génération -->
+<select id="generator" onchange="generate()"><option>Choix de fonction génératrice (placeholder)</option></select>
+<!-- Paramètres des générateurs -->
+<div id="inputParams">
+  <label for="n">n (long.)</label><input type="range" id="n" min="1" max="6" value="3" onchange="updateInputs();generate()"/>
+  <label for="b">b (base)</label><input type="range" id="b" min="0" max="36" value="3" onchange="updateInputs();generate()"/>
+  <label for="capMin">capMin</label><input type="range" id="capMin" min="0" max="35" value="1" onchange="updateInputs();generate()"/>
+  <label for="capMax">capMax</label><input type="range" id="capMax" min="1" max="36" value="9" onchange="updateInputs();generate()"/>
+<button onclick="runAnalysis()">Analyser</button>
+</div>
+<!-- Zone d'entrée et lancement de l’analyse -->
+<textarea id="input">333,4242,66661,012,54321,7k9,bx2,m84,j2l5,z1pc,a90s,8r3g,qtxk,0v4h,d5w1,1zlm5,2f9qp,7xv3c,b0n29,g4rj1,t8k6w,pzcx7,w3f9v,e6l2k,5mnqs,vhr10,8dky,c4p8,jy01,3g7w,0nfkj,2vz4x,lx0w2,k7r3d,9h1jm,bvy93,tq0m,1opz8,4x5jw,s62kr,7jlvp,c9q1w,0mz7x,dxf02,wq4s,eytk3,3g1n,knb7p,8zfsr,v5dj,2phlc,mx4v,9oqk,u7wgr,6tbz0</textarea>
+<!-- Onglets -->
+<div id="tabs">
+  <button id="btn-table" onclick="showTab('table')" class="active">Table</button>
+  <button id="btn-graph" onclick="showTab('graph')">Graphe</button>
+  <button id="btn-states" onclick="showTab('states')">États</button>
+  <button id="btn-logs" onclick="showTab('logs')">Logs</button>
+</div>
+</section>
+<section>
+<!-- Contenu des onglets -->
+<div id="tabContent">
+  <div id="tab-table" class="tab-pane active"><h2>Résultats</h2><table border="1"><thead></thead><tbody id="result"></tbody></table></div>
+  <div id="tab-graph" class="tab-pane">[Graph non généré]</div>
+  <div id="tab-states" class="tab-pane">[États non générés]</div>
+  <div id="tab-logs" class="tab-pane">[Logs d’analyse]</div>
+</div>
+</section>
+</article>
+</main>
+<script>
+// ===🔹 Bloc 1 – Fonctions de base pour l’analyse structurelle des séquences ==
+// Fonctions utilitaires de base sur les tableaux
+function uniq(arr) { return arr.filter((v, i, a) => a.indexOf(v) === i); }
+function isStrictlyDecreasing(arr) { return arr.every((v, i, a) => i === 0 || v < a[i - 1]); }
+function isNotIncreasing(arr) { return arr.every((v, i, a) => i === 0 || v <= a[i - 1]); }
+// Fonctions de reconnaissance de structure
+function isPartition(arr) { return !arr.includes(0) && isNotIncreasing(arr); }
+function isSpine(arr, n) { return arr.every((v, i, a) => i === 0 || (v % n === a[i - 1] % n)); }
+function isNexus(arr) { return arr.every(v => v === arr[0]); }
+// Fonctions d'analyse combinatoire
+function hasCollision(arr) { const hits = arr.map((v, i) => v + i);return uniq(hits).length !== hits.length; }
+function isBijectiveModN(arr, n) { return uniq(arr).length === n && Math.min(...arr) === 0 && Math.max(...arr) === n - 1; }
+// Fonctions d'extraction numérique
+function quotients(arr, n) { return arr.map(v => Math.floor(v / n)); }
+function residuals(arr, n) { return arr.map(v => v % n); }
+function projected(arr) { return arr.map((v, i) => v + i); /* position absolue de l'impact temporel */ }
+// Fonction de test de cyclicité (structure siteswap valide)
+function isCyclic(arr) { const n = arr.length;const targets = residuals(projected(arr), n);return isBijectiveModN(targets, n); }
+
+// === 🔹 Bloc 2 – Tokenisation d’une chaîne seq en base 36 ====================
+
+const tokens = "0123456789abcdefghijklmnopqrstuvwxyz".split("");
+// Convertit une chaîne en tableau d’indices (base 36)
+function tokenizer(seq) {
+  return [...seq].map(char => {
+    const index = tokens.indexOf(char);
+    if (index === -1) throw new Error(`Caractère invalide : ${char}`);
+    return index;
+  });
+}
+// Convertit un tableau d’indices (base 36) en chaîne
+function detokenizer(arr) {
+  return arr.map(i => {
+    if (i < 0 || i >= tokens.length) throw new Error(`Indice invalide : ${i}`);
+    return tokens[i];
+  }).join('');
+}
+// Nettoie une chaîne, supprime les espaces et normalise le format CSV
+function cleanAndSplit(text) {
+  const lowerText = text.toLowerCase();
+  if (!/^[0-9a-z, ]*$/.test(lowerText)) {
+    throw new Error("Chaîne invalide : caractères autorisés uniquement [0-9a-z, ]");
+  }
+  const normalized = lowerText.replace(/\s+/g, "");
+  return normalized.split(",").filter(s => s.length > 0);
+}
+
+
+// === 🔹 Bloc 3 – Analyse complète d'une séquence seq =========================
+
+/* Exemple : getType(tokenizer(seq)); */
+function getType(arr) {
+  if (isNexus(arr)) return "type_nexus";
+  if (isSpine(arr, arr.length)) return "type_spine";
+  if (isStrictlyDecreasing(arr)) return "type_partition";
+  return "type_mixed";
+}
+
+// Fonction principale d’analyse d’une séquence : renvoie un objet structuré
+function analyze(seq) {
+  const input = seq;
+  const tokenized = tokenizer(seq);
+  const n = tokenized.length;
+  const projectedArr = projected(tokenized);
+  const residualsArr = residuals(projectedArr, n);
+  const quotientArr = quotients(projectedArr, n);
+  const type = getType(tokenized);
+  const cyclic = isCyclic(tokenized);
+  const collisions = hasCollision(tokenized);
+  return {
+    input,
+    tokenized,
+    projected: projectedArr,
+    residuals_mod_n: residualsArr,
+    quotients_div_n: quotientArr,
+    type,
+    isCyclic: cyclic,
+    hasCollision: collisions
+  };
+}
+
+// Liste des clés à afficher dans l’analyse avec labels lisibles
+const analyseDataName = [
+  { label: "🧵 Séquence", key: "input" },
+  { label: "🏷️ Type", key: "type" },
+  { label: "🔢 Tokenized", key: "tokenized" },
+  { label: "🎯 Projected", key: "projected" },
+  { label: "🔄️  Residuals mod n", key: "residuals_mod_n" },
+  { label: "➗ Quotients div n", key: "quotients_div_n" },
+  { label: "♻ Cyclique", key: "isCyclic" },
+  { label: "💥 Collision", key: "hasCollision" }
+];
+
+// === gestion des onglets ====================================================
+
+function showTab(name) {
+  // Cacher toutes les sections
+  document.querySelectorAll('.tab-pane').forEach(pane => {
+    pane.style.display = 'none';
+  });
+
+  // Afficher la section sélectionnée
+  const selected = document.getElementById('tab-' + name);
+  if (selected) selected.style.display = 'block';
+
+  // Mettre à jour la classe active sur les boutons du menu
+  document.querySelectorAll('#tabs button').forEach(btn => {
+    btn.classList.toggle('active', btn.id === 'btn-' + name);
+  });
+}
+
+
+function runAnalysis() {
+  renderTable();
+  renderGraph();
+  renderStates();
+  renderLogs("Analyse lancée avec succès.");
+  showTab('table');
+}
+
+// === onglet en cours de developpent =========================================
+    function renderGraph() {
+      document.getElementById("tab-graph").innerHTML = "<svg width='300' height='100'><circle cx='50' cy='50' r='20' fill='red' /><text x='80' y='55'>[Graph SVG ici]</text></svg>";
+    }
+    function renderStates() {
+      document.getElementById("tab-states").innerText = "États binaires : [TODO]";
+    }
+    function renderLogs(msg) {
+      const logDiv = document.getElementById("tab-logs");
+      logDiv.innerText += msg + "\n";
+    }
+
+// === onglet table de typage =================================================
+
+function buildTableHeader() {
+  const thead = document.querySelector("table thead");
+  thead.innerHTML = ""; // === reset
+  const tr = document.createElement("tr");
+  for (const col of analyseDataName) {
+    const th = document.createElement("th");
+    th.textContent = col.label;
+    tr.appendChild(th);
+  }
+  thead.appendChild(tr);
+}
+function renderTable() {
+  buildTableHeader();
+  const sequences = cleanAndSplit(document.getElementById("input").value);
+  const tbody = document.getElementById("result");
+  tbody.innerHTML = "";
+  for (const seq of sequences) {
+    try {
+      const data = analyze(seq);
+      const row = document.createElement("tr");
+      row.setAttribute("type", data.type);
+      for (const col of analyseDataName) {
+        const td = document.createElement("td");
+        let val = data[col.key];
+        // === On convertit en string propre les arrays ou booléens
+        if (Array.isArray(val)) {
+          val = "[" + val.join(", ") + "]";
+        } else if (typeof val === "boolean") {
+          val = val ? "✅" : "❌";
+        } else if (typeof val === "string") {
+          // === Pour le type on enlève "type_" et on met en majuscules
+          if (col.key === "type") {
+            val = val.replace("type_", "").toUpperCase();
+          }
+        }
+        td.textContent = val;
+        row.appendChild(td);
+      }
+      tbody.appendChild(row);
+    } catch (e) {
+      console.error("Erreur analyse séquence", seq, e);
+    }
+  }
+}
+</script>
+</body>
+</html>
