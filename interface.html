@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<title>🧊 Interface Symbolique</title>
+		<link rel="stylesheet" href="style/ui.css" />
+	</head>
+<body onload="main()">
+		<header>
+			<h1>🧮 Interface Combinatoire</h1>
+		</header>
+		<section>
+			<!-- 🎛️ Onglets de génération (niveau 1) -->
+			<nav id="gen-tabs" class="tabs">
+				<button class="tab-button active" data-tab="partition">⛓️ Partition</button>
+				<button class="tab-button"        data-tab="arrangement">⛓️ Arrangement</button>
+				<button class="tab-button"        data-tab="siteswap">⛓️ Siteswap</button>
+				<button class="tab-button"        data-tab="quotient">⛓️ Quotient</button>
+			</nav>
+			<!-- 📦 Contenus liés au niveau 1 -->
+			<div class="tab-content active" id="partition">Contenu : Partition</div>
+			<div class="tab-content" id="arrangement" style="display: none;">Contenu : Arrangement</div>
+			<div class="tab-content" id="siteswap" style="display: none;">Contenu : Siteswap</div>
+			<div class="tab-content" id="quotient" style="display: none;">Contenu : Quotient</div>
+			<div id="inputParams">
+			<!-- 🎚️ Paramètres -->
+				<label for="n"      ></label><input type="range" id="n"      name="n"      min="1" max="6"  value="3" onchange="updateInputs();generate()"/>
+				<label for="b"      ></label><input type="range" id="b"      name="b"      min="0" max="36" value="3" onchange="updateInputs();generate()"/>
+				<label for="capMin" ></label><input type="range" id="capMin" name="capMin" min="0" max="35" value="1" onchange="updateInputs();generate()"/>
+				<label for="capMax" ></label><input type="range" id="capMax" name="capMax" min="1" max="36" value="9" onchange="updateInputs();generate()"/>
+			</div>
+			<textarea id="outputRaw" rows="5">333,4242,66661,012,54321,7k9,bx2,m84,j2l5,z1pc,a90s,8r3g,qtxk,0v4h,d5w1</textarea>
+		</section>
+		<section>
+		<!-- 📝 Résultat brut (liste ou texte) -->
+		<button onclick="runAnalysis()" class="active">Analyser</button>
+		<!-- 🧭 Onglets de visualisation (niveau 2) -->
+		<nav id="view-tabs" class="tabs-bar">
+		<button class="tab-button-2 active" data-tab="table">Table</button>
+		<button class="tab-button-2"        data-tab="graph">Graphe</button>
+		<button class="tab-button-2"        data-tab="states">États</button>
+		<button class="tab-button-2"        data-tab="logs">Logs</button>
+		</nav>
+		</section>
+
+		<!-- 📊 Contenus liés au niveau 2 -->
+		<section>
+		<div class="tab-pane active" id="table">[Table générée]</div>
+		<div class="tab-pane" id="graph" style="display: none;">[Graph non généré]</div>
+		<div class="tab-pane" id="states" style="display: none;">[États non générés]</div>
+		<div class="tab-pane" id="logs"   style="display: none;">[Logs d’analyse]</div>
+		</section>
+
+<script src="script/ui.js"></script>
+<script src="script/glue.js"></script>
+
+		<script>
+
+
+</script>
+
+<script>
+function main() {
+	if (typeof currentGen !== "string") currentGen = "partition";
+	configureInputsFor(currentGen);
+	updateInputs();
+	if (typeof generate === "function") generate();
+}
+</script>
+
+
+
+
+
+</script>
+	</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,180 @@
+/* 🌌 Interface Combinatoire — Thème clair + sombre minimaliste */
+
+:root {
+  /* Polices */
+  --sans-font: "Roboto", "Segoe UI", "Noto Sans", sans-serif;
+  --mono-font: "Fira Mono", Consolas, monospace;
+
+  /* Dimensions */
+  --radius: 4px;
+  --border-width: 2px;
+
+  /* Couleurs clair */
+  --bg: #fafafa;
+  --accent-bg: #d7e9ff;
+  --accent: #5a9bf6;       /* bleu ciel */
+  --text: #222;
+  --text-light: #555;
+  --code-bg: #121212;
+  --code-blue: #569cd6;
+  --code-pink: #d16bb7;
+  --code-yellow: #dcdcaa;
+  --muted: #999;
+  --disabled: #ccc;
+  --green-accent: #4b7158; /* vert mousse */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+--accent-bg: #000;  /* bleu très clair, presque lavande pâle */
+--accent:    #ccc;  /* bleu ciel doux et apaisant */
+    --text: #eee;
+    --text-light: #999;
+    --code-bg: #1a1a1a;
+    --code-blue: #84a9c0;
+    --code-pink: #cc8cb4;
+    --code-yellow: #dcdcaa;
+    --muted: #555;
+    --disabled: #333;
+  }
+}
+
+/* Base */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--sans-font);
+  margin: 0;
+  padding: 1rem;
+  font-size: 14px;
+  line-height: 1.4;
+}
+nav{  border-width:0 0 2px 0; border-style:solid; border-color: var(--accent);
+
+}
+/* Textarea - fond sombre même en clair */
+textarea {
+  width: 100%;
+  background: var(--code-bg);
+  color: var(--code-yellow);
+  font-family: var(--mono-font);
+  font-size: 13px;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  border: var(--border-width) solid var(--accent);
+  resize: vertical;
+  box-sizing: border-box;
+  line-height: 1.4;
+  outline-offset: 2px;
+}
+
+/* Syntax colors for code inside textarea if needed (simulated) */
+code {
+  font-family: var(--mono-font);
+  font-weight: 600;
+  color: var(--code-blue);
+}
+
+/* Boutons nets et arrondis */
+button {
+  background-color: var(--accent-bg);
+  border: var(--border-width) solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem;
+  font-family: var(--sans-font);
+  font-size: 14px;
+  cursor: pointer;
+  transition: none;
+  user-select: none;
+}
+
+button:hover {
+  background-color: var(--accent);
+  color: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+button:active {
+  background-color: var(--blue-accent);
+  border-color: var(--green-accent);
+  color: var(--accent-bg);
+}
+
+/* Boutons actifs */
+button.active {
+  background-color: var(--accent);
+  color: var(--accent-bg);
+  font-weight: 600;
+  border-color: var(--accent);
+}
+
+/* Boutons désactivés */
+button:disabled {
+  background-color: var(--muted);
+  border-color: var(--muted);
+  color: var(--disabled);
+  cursor: not-allowed;
+}
+
+/* Onglets carrés bien visibles, compact */
+#tabs, #gen-tabs, #view-tabs {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0rem;
+}
+
+.tab-button, .tab-button-2 {
+  flex: 1 1 auto;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--accent-bg);
+  border: var(--border-width) solid transparent;
+  border-bottom: var(--border-width) solid var(--accent-bg);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0;
+  transition: none;
+}
+
+.tab-button.active, .tab-button-2.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  border-bottom: var(--border-width) solid var(--bg);
+  color: var(--accent-bg);
+  font-weight: 700;
+  user-select: none;
+}
+
+.tab-content, .tab-pane {
+  border: var(--border-width) solid var(--accent);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1rem;
+  margin-top: 0;
+  display: none;
+}
+
+.tab-content.active, .tab-pane.active,
+.tab-content[style*="display: block"], .tab-pane[style*="display: block"] {
+  display: block;
+  opacity: 1;
+}
+
+/* Paramètres entrée (labels compacts) */
+#inputParams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+#inputParams label {
+  min-width: 6em;
+  user-select: none;
+  font-weight: 500;
+}
