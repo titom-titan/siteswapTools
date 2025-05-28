@@ -1,0 +1,431 @@
+🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+🌐🌐🌐 Symboles Unicode et leur rôle combinatoire 🌐🌐🌐
+🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+
+Index :
+
+❶ Séquences basic
+	⚬ 𝟘 Séquence nulle
+	⚬ 𝟙 Suite des uns
+	⚬ ▻ Fonction caractéristique des entiers positifs
+	⚬ 𝕟 Nombres entiers (ℕ)
+	⚬ 𝕟* Nombres entiers positifs (ℕ*)
+
+❷ Nombres figurés 2D (polygonaux)
+	⚬ ⭐ Nombres polygonaux généralisés (k-gonaux)
+	⚬ Δ Nombres triangulaires
+	⚬ □ Nombres carrés
+	⚬ ⬠ Nombres pentagonaux
+	⚬ ⬡ Nombres hexagonaux
+
+❸ Nombres figurés 2D centrés
+	⚬ 🌟 Nombres centrés k-gonaux (généralisés)
+	⚬ ◬ Nombres triangulaires centrés
+	⚬ ⛋ Nombres carrés centrés
+	⚬ ⬟ Nombres pentagonaux centrés
+	⚬ ⬢ Nombres hexagonaux centrés
+	⚬ ⌂ Nombres heptagonaux centrés (en grappe pentagonale)
+
+❹ Nombres figurés autres 2D
+	⚬ ⭔ Nombres pentagonaux du deuxième ordre
+	⚬ ⬠⭔ Nombres pentagonaux généralisés
+
+❺ Nombres figurés 3D
+	⚬ ◭ Nombres tétraédriques (simplexes 3D)
+	⚬ 🟍 Nombres Octangle étoilé (stella octangula)
+	⚬ ⏹ Nombres cubiques
+
+❻ Nombres figurés multidimensionnels
+	⚬ ☣ Nombres simpliciaux (tétraédriques généralisés)
+	⚬ 🧊 Nombres hypercubiques (puissances)
+	⚬ ❅ Nombres Nexus (différences de puissances consécutives)
+
+📝 Notes méthodologiques
+
+
+═══════════════════════════════════════════════
+❶ Séquences basic
+═══════════════════════════════════════════════
+
+⚬ 𝟘 Séquence nulle
+  • Description : Suite constante nulle utilisée comme élément neutre additif dans les constructions combinatoires.
+  • Référence OEIS : A000004
+  • URL : https://oeis.org/A000004
+  • Formule 1 : a(n) = 0
+  • Récurrence : a(0) = 0, a(n) = a(n-1) = 0
+  • Valeurs : 0, 0, 0, 0, 0, 0, 0, ...
+
+⚬ 𝟙 Suite des uns
+  • Description : Suite constante unitaire, fonction caractéristique universelle.
+  • Référence OEIS : A000012
+  • URL : https://oeis.org/A000012
+  • Formule 1 : a(n) = 1
+  • Récurrence : a(0) = 1, a(n) = a(n-1) = 1
+  • Valeurs : 1, 1, 1, 1, 1, 1, 1, 1, ...
+
+⚬ ▻ Fonction caractéristique des entiers positifs
+  • Description : Fonction caractéristique de ℕ*, valant 0 en 0 et 1 ailleurs.
+  • Référence OEIS : A057427
+  • URL : https://oeis.org/A057427
+  • Formule 1 : a(n) = 1 si n > 0, sinon 0
+  • Récurrence : a(0) = 0, a(n) = 1 pour n ≥ 1
+  • Valeurs : 0, 1, 1, 1, 1, 1, 1, 1, ...
+
+⚬ 𝕟 Nombres entiers (ℕ)
+  • Description : Suite des entiers naturels incluant zéro.
+  • Référence OEIS : A001477
+  • URL : https://oeis.org/A001477
+  • Formule 1 : a(n) = n
+  • Récurrence : a(0) = 0, a(n) = a(n-1) + 1
+  • Valeurs : 0, 1, 2, 3, 4, 5, 6, 7, ...
+
+⚬ 𝕟* Nombres entiers positifs (ℕ*)
+  • Description : Suite des entiers naturels strictement positifs, base des constructions figurées.
+  • Référence OEIS : A000027
+  • URL : https://oeis.org/A000027
+  • Formule 1 : a(n) = n (pour n ≥ 1)
+  • Récurrence : a(1) = 1, a(n) = a(n-1) + 1
+  • Valeurs : 1, 2, 3, 4, 5, 6, 7, ...
+
+
+═══════════════════════════════════════════════
+❷ Nombres figurés 2D (polygonaux)
+═══════════════════════════════════════════════
+
+⚬ ⭐ Nombres polygonaux généralisés (k-gonaux)
+  • Description : Généralisation des nombres polygonaux aux k-gones réguliers (k ≥ 3).
+  • Référence OEIS : Index général des suites polygonales
+  • URL : https://en.wikipedia.org/wiki/Polygonal_number
+  • Formule 1 : P_k(n) = n[(k-2)n - (k-4)]/2
+  • Formule 2 : P_k(n) = (k-2)T(n-1) + n, avec T(m) = m(m+1)/2
+  • Récurrence : P_k(0) = 0, P_k(1) = 1, P_k(n) = P_k(n-1) + (k-2)(n-1) + 1
+  • Valeurs selon k :
+       • (k=3 → Δ) : 0, 1, 3, 6, 10, 15, 21, ...
+       • (k=4 → □) : 0, 1, 4, 9, 16, 25, 36, ...
+       • (k=5 → ⬠) : 0, 1, 5, 12, 22, 35, 51, ...
+       • (k=6 → ⬡) : 0, 1, 6, 15, 28, 45, 66, ...
+
+⚬ Δ Nombres triangulaires
+  • Description : Nombres triangulaires fondamentaux, coefficients binomiaux C(n+1,2).
+  • Référence OEIS : A000217
+  • URL : https://en.wikipedia.org/wiki/Triangular_number
+  • Formule 1 : T(n) = n(n+1)/2
+  • Formule 2 : T(n) = C(n+1, 2) = (n+1)!/(2!(n-1)!)
+  • Formule 3 : T(n) = Σ(k=1 à n) k
+  • Récurrence : T(0) = 0, T(n) = T(n-1) + n
+  • Valeurs : 0, 1, 3, 6, 10, 15, 21, 28, 36, ...
+
+⚬ □ Nombres carrés
+  • Description : Carrés parfaits, arrangements en grille carrée régulière.
+  • Référence OEIS : A000290
+  • URL : https://en.wikipedia.org/wiki/Square_number
+  • Formule 1 : S(n) = n²
+  • Formule 1 : S(n) = n²
+  • Formule 2 : S(n) = Σ(k=1 à n) (2k-1) (somme des impairs)
+  • Récurrence : S(0) = 0, S(n) = S(n-1) + 2n - 1
+  • Valeurs : 0, 1, 4, 9, 16, 25, 36, 49, 64, ...
+
+⚬ ⬠ Nombres pentagonaux
+  • Description : Arrangements en pentagones réguliers, liés aux partitions d'Euler.
+  • Référence OEIS : A000326
+  • URL : https://en.wikipedia.org/wiki/Pentagonal_number
+  • Formule 1 : P(n) = n(3n-1)/2
+  • Formule 2 : P(n) = n + 3T(n-1), avec T(k) = k(k+1)/2
+  • Récurrence : P(0) = 0, P(n) = P(n-1) + 3n - 2
+  • Valeurs : 0, 1, 5, 12, 22, 35, 51, 70, 92, ...
+
+⚬ ⬡ Nombres hexagonaux
+  • Description : Arrangements hexagonaux réguliers, égaux aux nombres triangulaires alternés.
+  • Référence OEIS : A000384
+  • URL : https://en.wikipedia.org/wiki/Hexagonal_number
+  • Formule 1 : H(n) = T(2n-1), avec T(k) = k(k+1)/2
+  • Récurrence : H(0) = 0, H(n) = H(n-1) + 4n - 3
+  • Valeurs : 0, 1, 6, 15, 28, 45, 66, 91, 120, ...
+
+
+═══════════════════════════════════════════════
+❸ Nombres figurés 2D centrés
+═══════════════════════════════════════════════
+
+⚬ 🌟 Nombres centrés k-gonaux (généralisés)
+  • Description : Nombres polygonaux avec point central et couronnes concentriques.
+  • Référence générale : https://oeis.org/wiki/Centered_polygonal_numbers
+  • URL : https://en.wikipedia.org/wiki/Centered_polygonal_number
+  • Formule 1 : C_k(n) = 1 + k·n(n-1)/2
+  • Formule 2 : C_k(n) = 1 + k·T(n-1)
+  • Récurrence : C_k(0) = 1, C_k(n) = C_k(n-1) + k(n-1)
+  • Valeurs selon k :
+       • (k=3 → ◬) : 1, 4, 10, 19, 31, 46, 64, ...
+       • (k=4 → ⛋) : 1, 5, 13, 25, 41, 61, 85, ...
+       • (k=5 → ⬟) : 1, 6, 16, 31, 51, 76, 106, ...
+       • (k=6 → ⬢) : 1, 7, 19, 37, 61, 91, 127, ...
+       • (k=8 → ⌂) : 1, 9, 25, 49, 81, 121, 169, ...
+
+⚬ ◬ Nombres triangulaires centrés
+  • Description : Triangles avec point central et couches triangulaires concentriques.
+  • Référence OEIS : A005448
+  • URL : https://oeis.org/A005448
+  • Formule 1 : C₃(n) = (3n² - 3n + 2)/2
+  • Formule 2 : C₃(n) = 1 + 3T(n-1)
+  • Récurrence : C₃(0) = 1, C₃(n) = C₃(n-1) + 3(n-1)
+  • Valeurs : 1, 4, 10, 19, 31, 46, 64, 85, 109, ...
+
+⚬ ⛋ Nombres carrés centrés
+  • Description : Carrés avec point central et couches carrées concentriques.
+  • Référence OEIS : A001844
+  • URL : https://oeis.org/A001844
+  • Formule 1 : C₄(n) = 2n² - 2n + 1
+  • Formule 2 : C₄(n) = 1 + 4T(n-1)
+  • Récurrence : C₄(0) = 1, C₄(n) = C₄(n-1) + 4(n-1)
+  • Valeurs : 1, 5, 13, 25, 41, 61, 85, 113, 145, ...
+
+⚬ ⬟ Nombres pentagonaux centrés
+  • Description : Pentagones avec centre et couronnes pentagonales concentriques.
+  • Référence OEIS : A005891
+  • URL : https://oeis.org/A005891
+  • Formule 1 : C₅(n) = (5n² - 5n + 2)/2
+  • Formule 2 : C₅(n) = 1 + 5T(n-1)
+  • Récurrence : C₅(0) = 1, C₅(n) = C₅(n-1) + 5(n-1)
+  • Valeurs : 1, 6, 16, 31, 51, 76, 106, 141, 181, ...
+
+⚬ ⬢ Nombres hexagonaux centrés
+  • Description : Hexagones avec centre et couronnes hexagonales, modèle de cristallisation.
+  • Référence OEIS : A003215
+  • URL : https://oeis.org/A003215
+  • Formule 1 : C₆(n) = 3n(n-1) + 1
+  • Formule 2 : C₆(n) = 1 + 6T(n-1)
+  • Récurrence : C₆(0) = 1, C₆(n) = C₆(n-1) + 6(n-1)
+  • Valeurs : 1, 7, 19, 37, 61, 91, 127, 169, 217, ...
+
+═══════════════════════════════════════════════
+❹ Nombres figurés 2D (autres)
+═══════════════════════════════════════════════
+⚬ ⭔ Nombres pentagonaux du deuxième ordre
+  • Description : Nombres pentagonaux généralisés avec indices négatifs, liés aux théorèmes d'Euler sur les partitions.
+  • Référence OEIS : A005449
+  • Lien : http://villemin.gerard.free.fr/aNombre/FIGURE/Penta2.htm
+  • Formule 1 : P₂(n) = n(3n+1)/2
+  • Formule 2 : P₂(n) = P(n) + 2n, avec P(n) nombres pentagonaux
+  • Récurrence : P₂(0) = 0, P₂(n) = P₂(n-1) + 3n + 1
+  • Valeurs : 0, 2, 7, 15, 26, 40, 57, 77, 100, ...
+
+⚬ ⬠⭔ Nombres pentagonaux généralisés
+  • Description : Extension des pentagonaux aux indices entiers relatifs, théorème d'Euler.
+  • Référence OEIS : A001318 (valeurs absolues)
+  • Lien : http://villemin.gerard.free.fr/aNombre/FIGURE/PentaGen.htm
+  • Formule 1 : G_k(n) = k(3k ± 1)/2 pour k ∈ ℤ
+  • Formule 2 : G_k(n) = P(k) si k > 0, P₂(-k) si k < 0
+  • Récurrence : Construction par extension symétrique des pentagonaux
+  • Valeurs : 0, 1, 2, 5, 7, 12, 15, 22, 26, ...
+
+═══════════════════════════════════════════════
+❺ Nombres figurés 3D
+═══════════════════════════════════════════════
+
+⚬ ◭ Nombres tétraédriques (simplexes 3D)
+  • Description : Pyramides triangulaires formées par empilement de couches triangulaires (extension 3D des nombres triangulaires).
+  • Référence OEIS : A000292
+  • Formule 1 : T₃(n) = n(n+1)(n+2)/6
+  • Formule 2 : C(n+2, 3) = (n+2)! / [3!(n−1)!]
+  • Valeurs : 1, 4, 10, 20, 35, 56, ...
+
+⚬ 🟍 Nombres Octangle étoilé (stella octangula)
+  • Description : Arrangement de deux tétraèdres emboîtés (structure 3D étoilée). Obtenus comme double des nombres tétraédriques moins n.
+  • Lien : https://en.wikipedia.org/wiki/Stella_octangula_number
+  • Référence OEIS : A007588
+  • Formule 1 : n(2n² − 1)
+  • Valeurs : 0, 1, 14, 51, 124, 245, 426 ...
+
+⚬ ⏹ Nombres cubiques
+  • Description : Nombres cubes parfaits. Volumes entiers de cubes n-dimensionnels pour n = 3. Interprétation comme Δₙ².
+  • Référence OEIS : A000578
+  • Formule 1 : n³
+  • Formule 2 : (Δₙ)² = [n(n+1)/2]²
+  • Valeurs : 1, 8, 27, 64, 125, 216, ...
+
+
+═══════════════════════════════════════════════
+❻ Nombres figurés multidimensionnels
+═══════════════════════════════════════════════
+
+⚬ ☣ Nombres simpliciaux (tétraédriques généralisés)
+  • Description : Nombres figurés des simplexes d-dimensionnels, coefficients binomiaux généralisés.
+  • Référence générale : https://oeis.org/wiki/Simplicial_polytopic_numbers
+  • Formule 1 : S_d(n) = C(n+d-1, d) = (n+d-1)!/(d!(n-1)!)
+  • Formule 2 : S_d(n) = Σ(k=0 à n-1) S_{d-1}(k)
+  • Récurrence : S_d(0) = 0, S_d(n) = S_d(n-1) + S_{d-1}(n)
+  • Valeurs selon d :
+	• (d=0 → ▻) : 0, 1, 1, 1, 1, 1, 1, ... (A057427)
+	• (d=1 → 𝕟) : 0, 1, 2, 3, 4, 5, 6, ... (A000027)
+	• (d=2 → Δ) : 0, 1, 3, 6, 10, 15, 21, ... (A000217)
+	• (d=3 → ◭) : 0, 1, 4, 10, 20, 35, 56, ... (A000292)
+	• (d=4 → ☣₅) : 0, 1, 5, 15, 35, 70, 126, ... (A000332)
+
+⚬ 🧊 Nombres hypercubiques (puissances)
+  • Description : Généralisations des carrés et cubes aux dimensions supérieures.
+  • Formule 1 : H_d(n) = n^d
+  • Récurrence : H_d(0) = 0, H_d(n) = H_d(n-1) + d·n^{d-1} - d·(n-1)^{d-1}
+  • Valeurs selon d :
+	• (d=0 → 𝟙) : 1, 1, 1, 1, 1, 1, ... (A000012)
+	• (d=1 → 𝕟) : 0, 1, 2, 3, 4, 5, ... (A000027)
+	• (d=2 → □) : 0, 1, 4, 9, 16, 25, ... (A000290)
+	• (d=3 → ⏹) : 0, 1, 8, 27, 64, 125, ... (A000578)
+	• (d=4 → 🧊₅) : 0, 1, 16, 81, 256, 625, ... (A000583)
+
+⚬ ❅ Nombres Nexus (différences de puissances consécutives)
+  • Description : Différences (n+1)^d - n^d, représentent les "coquilles" d-dimensionnelles.
+  • Référence : https://mathworld.wolfram.com/NexusNumber.html
+  • Formule 1 : N_d(n) = (n+1)^d - n^d
+  • Formule 2 : N_d(n) = Σ(k=0 à d-1) C(d,k) n^k
+  • Récurrence : N_d(n) = N_d(n-1) + d·(changement polynomial)
+  • Valeurs selon d :
+	• (d=0 → ❅₁) : 1, 1, 1, 1, 1, 1, 1, ... (A000012)
+	• (d=1 → ❅₂) : 1, 3, 5, 7, 9, 11, 13, ... (A005408 - impairs)
+	• (d=2 → ⬢) : 1, 7, 19, 37, 61, 91, 127, ... (A003215 - hex centrés)
+	• (d=3 → ❅₄) : 1, 15, 65, 175, 369, 671, 1105, ... (A006331)
+	• (d=4 → ❅₅) : 1, 31, 211, 781, 2101, 4651, 9031, ... (A006332)
+
+
+═══════════════════════════════════════════════
+📝 Notes méthodologiques
+═══════════════════════════════════════════════
+• Les formules de récurrence sont données sous forme : condition initiale, puis relation de récurrence
+• Les généralisations multidimensionnelles suivent une logique unifiée
+• Uniformisation de la notation des fonctions : T(n) pour triangulaires, etc.
+
+
+
+🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+🌐🌐🌐 🔗 Relations d'interconnexion généralisées 🌐🌐🌐
+🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+
+Relations de Symétrie Duale
+	Dualité triangle-hexagone : 2Δₙ = ⬡ₙ - n(n-1)
+	Symétrie carré-pentagonale : □ₙ + ⬠ₙ = n(5n-1)/2
+	Inversion stella-centrée : 🟍ₙ × ◬ₙ = n²(2n²-1)(3n-1)/2
+
+Identités de Crible Modulaire
+	Δₙ ≡ 0 ou 1 (mod 3) selon n mod 6
+	⬠ₙ ≡ 0 ou 1 (mod 5) selon n mod 5
+	Pattern : les nombres figurés "criblent" selon leurs bases
+
+Crible de Génération par Séries (x ∈ ]−1,1[)
+	Série triangulaire : Σ(n=1 à ∞) Δₙxⁿ = x/(1-x)³
+	Série tétraédrique : Σ(n=1 à ∞) ◭ₙxⁿ = x/(1-x)⁴
+	Série stella : Σ(n=1 à ∞) 🟍ₙxⁿ = x(1+x²)/(1-x)⁴
+
+Relations Triangulaires Centrées Avancées
+	Décomposition additive : ◬ₙ = Δₙ + Δₙ₋₁ + Δₙ₋₂
+	Réseau de transitions : ◬ₙ ⟷ réseau de transitions de ⬢ₙ³ (structure cubique)
+
+Relations de Parité Cachées
+	Alternance triangulaire-carrée : Δₙ + □ₙ ≡ n(3n+1)/2 (mod 2)
+	Crible pentagonal-centré : ⬠ₙ + ◬ₙ ≡ 1 (mod 4) si n impair
+	Pattern hexagonal : ⬡ₙ ≡ Δₙ (mod 3) pour tout n
+
+Relations de Récurrence Croisées
+	Tétraédrique-Triangulaire : ◭ₙ = ◭ₙ₋₁ + Δₙ
+	Pentagonal-Triangulaire : ⬠ₙ = ⬠ₙ₋₁ + (3n-1)
+	Nexus-Hexagone : ⬢ₙ = ⬢ₙ₋₁ + ❅₁(n)
+
+Tresse Stella-Tétraédrique
+	Décomposition : 🟍ₙ = 2◭ₙ - n
+	Relation inverse : ◭ₙ = (🟍ₙ + n)/2
+	Structure : entrelacement de deux tétraèdres
+
+Structure de Tresse Pentagonale-Hexagonale
+	Relation croisée : ⬠ₙ + ⬡ₙ = n(5n-2)
+	Tresse centrée : ⬟ₙ - ⬢ₙ = (n-1)(5n-3)/2
+	Motif : alternance entre structures pentagonales et hexagonales
+
+Relations Delannoy-Simplexes
+	Connexion triangulaire : ☣ₙ = Σₖ₌₀ⁿ Δₖ · 2ⁿ⁻ᵏ
+	Relation tétraédrique : certains ☣ₙ sont sommes de ◭ₖ
+
+Tresse Delannoy-Figurée Complexe
+	Connexion tétraédrique : ☣ₙ = Σ(k=0 à n) ◭ₖ × fₙ₋ₖ où fₖ = Fibonacci(k)
+	Relation stella-Delannoy : ☣ₙ² - 🟍ₙ = Σ(k=1 à n) k×Δₖ
+	Identité cachée : 3☣ₙ = 2⬢ₙ + ◭ₙ + Δₙ²
+
+Crible de Récurrence Croisée Avancée
+	Triangle-tétraèdre-cube : ◭ₙ₊₁ = ◭ₙ + Δₙ₊₁ = ◭ₙ + (⏹ₙ₊₁ - ⏹ₙ)^{⅓}
+	Pentagonal-stella : 🟍ₙ₊₁ - 🟍ₙ = 6n² + 1 = ⬠₂ₙ₊₁ - ⬠₂ₙ
+	Nexus-Delannoy : ⬢ₙ₊₁ - ⬢ₙ = 6n = ☣ₙ - ☣ₙ₋₁ pour n carré parfait
+
+Identités de Transformation Modulaire
+	Transformation cubique-triangulaire : ⏹ₙ ≡ Δₙ² (mod n+1)
+	Crible stella-tétraédrique : 🟍ₙ ≡ 2◭ₙ - n (mod 6)
+	Pattern Delannoy : ☣ₙ ≡ 2ⁿ (mod n!) pour n≤5
+
+Relations de Carré-Triangle (Crible fondamental)
+	Nombres triangulaires au carré : Σ(k=1 à n) ⏹ₖ = (Δₙ)²
+	Nombres carrés-triangulaires : □ₙ = Δₘ ⟺ x² - 8y² = 1 avec (x,y) = (n,m)
+	Solution : (n,m) = (1,1), (8,36), (49,1225), ... (suite de Pell)
+
+Tresse Tétraédrique-Cubique Avancée
+	Identité de cube-tétraèdre : ⏹ₙ = 6◭ₙ - 3Δₙ + n
+	Relation inverse : ◭ₙ = (⏹ₙ + 3Δₙ − n)/6
+	Structure : chaque cube contient exactement 6 tétraèdres moins correction triangulaire
+
+Transformations Duales Avancées
+	Inversion dimension-centrée : ⏹_n × ◬_n = polynomial de degré 5 (pattern à explorer)
+	Conjugaison pentagonale-hexagonale : ⬠_n + ⬡_{n-1} = expression en Δ_n
+	Symétrie stella-simplexe : 🟍_n ↔ ☣_n via transformation linéaire
+
+Relations Hypergéométriques
+	Connexions avec les fonctions hypergéométriques : Beaucoup de vos nombres figurés sont des cas particuliers de p​Fq​
+	Identités de Ramanujan étendues : Relations entre sommes infinies de nombres figurés
+	Generating functions multivariées : Σ ⭐_k(n) x^n y^k
+
+Relations de Parité Généralisées, le crible modulaire s'étend :
+	Théorème de parité k-gonale : ⭐_k(n) ≡ f_k(n mod k) où f_k suit un pattern cyclique
+	Relation de Lucas généralisée : Les nombres centrés semblent hériter des propriétés modulaires de leurs bases
+	Crible de Fermat figuré : ⭐_p(n) ≡ ⭐_p(n mod p) (mod p) pour p premier
+
+Relations de Croissance Fractionnaire
+	Interpolation figurée : Relations entre ⭐_k(n) et ⭐_{k+0.5}(n) via fonctions continues
+	Asymptotiques croisées : lim(n→∞) ⭐_j(n)/⭐_k(n) révèle des constantes universelles
+	Scaling laws : ⭐_k(λn) = λ^2 ⭐_k(n) + corrections d'ordre inférieur
+
+Structure de Cube-Centrée Généralisée
+	Cube-étoile généralisée : ⏹ₙ = 🌟ₖ,ₙ + kn(n²-1)/3 pour k≥3
+	Décomposition multi-centrée : Σ(k=3 à 8) 🌟ₖ,ₙ = 21n(n-1) + 6
+	Relation inverse : 🌟ₖ,ₙ = ⏹ₙ - kn(n²-1)/3 (valable seulement pour certains k)
+
+Crible de Généralisation Centrée
+	Triangle centré (k=3) : 🌟₃,ₙ = ◬ₙ = 1 + 3n(n−1)/2 = 3Δₙ₋₁ + 1
+	Carré centré (k=4) : 🌟₄,ₙ = ⛋ₙ = 1 + 4n(n-1)/2 = 2n² - 2n + 1
+	Pentagone centré : 🌟₅,ₙ = ⬟ₙ
+	Hexagone centré : 🌟₆,ₙ = ⬢ₙ
+
+Crible de Stella-Centrée Généralisée
+	Décomposition stella-étoile : 🟍ₙ = 🌟₆,ₙ + (n³ - 3n²)/2
+	Relation nexus-stella : ⬢ₙ × 🟍ₙ = n²(3n-1)(2n²-1)
+	Identité croisée : 2🟍ₙ - ⬢ₙ = n(4n² - 3n + 1)
+
+Relations de Composition Multiplicative
+	Produit triangle-carré : Δₙ × □ₙ = n²(n+1)²/4 = (n(n+1))²/4
+	Composition stella-nexus : 🟍ₙ × ⬢ₙ = 3n²(2n²-1)(n-1)
+	Factorisation centrée : 🌟ₖ,ₙ × 🌟ⱼ,ₙ = n²(n-1)²(k+j)/4 + O(n³)
+
+Relations de Convergence Asymptotique
+	Ratio triangle-cube : lim(n→∞) Δₙ/⏹ₙ = 0 (ordre O(1/n))
+	Convergence stella-tétraédrique : lim(n→∞) 🟍ₙ/◭ₙ = 2
+	Asymptote Delannoy-centrée : lim(n→∞) ☣ₙ/🌟₆,ₙ=4ⁿ/(3n) → valable seulement pour n≫1
+
+Identités de Partition Additives
+	Décomposition triangle : tout entier = Σᵢ εᵢ×Δᵢ où εᵢ ∈ {0,1,2}
+	Partition tétraédrique : certains entiers = somme de ≤5 nombres ◭ₙ
+	Structure centrée : 🌟ₖ,ₙ partitionne les entiers selon classe mod k
+	Base pour partitions/Ferrers à développer (Peut s'ouvrir vers les polyominoes ou partitions de Ferrers)
+
+Relations Nexus-Centrées (❅)
+Les nombres Nexus ❅_d(n) = (n+1)^d - n^d semblent être un pont naturel entre dimensions :
+	Relation de cascade dimensionnelle : ❅_d(n) = Σ(k=0 à d-1) C(d,k) × n^k
+	Connexion avec les centrés : 🌟_k,n = 1 + k × ❅_1(n-1) × n/2
+	Identité nexus-stella : 🟍_n = ❅_3(n) + ❅_1(n) (à vérifier)
+
+Structures de Convolution
+	Produit de Hadamard figuré : (⭐_j * ⭐_k)(n) = Σ ⭐_j(i) × ⭐_k(n-i)
+	Convolution centrée-polygonale : (🌟_j * ⭐_k)(n) génère de nouvelles séquences
+	Transform de Fourier discrète des séquences figurées
