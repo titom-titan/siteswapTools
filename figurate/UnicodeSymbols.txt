@@ -1,8 +1,17 @@
-🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
-🌐🌐🌐 Symboles Unicode et leur rôle combinatoire 🌐🌐🌐
-🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+█░         Lexique Symbolique Combinatoire                             ░█
+█░          Tresses • Cribles • Orbites                                ░█
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 
 Index :
+
+✦ Note Méthodologique ✦
+
+🌐 Symboles Unicode et leur rôle combinatoire
+
+=> table de présentatation
 
 ❶ Séquences basic
 	⚬ 𝟘 Séquence nulle
@@ -40,7 +49,104 @@ Index :
 	⚬ 🧊 Nombres hypercubiques (puissances)
 	⚬ ❅ Nombres Nexus (différences de puissances consécutives)
 
-📝 Notes méthodologiques
+🌐 🔗 Relations d'interconnexion généralisées 🌐
+
+### ⊚ 1.  **Dualités et Symétries fondamentales**
+### ⊚ 2.  **Cribles Modulaires et Parités**
+### ⊚ 3.  **Relations Séries et Génératrices**
+### ⊚ 4.  **Récurrences et Croissances croisées**
+### ⊚ 5.  **Tresses et Enchevêtrements dimensionnels**
+### ⊚ 6.  **Connexions Delannoy et Simplexes**
+### ⊚ 7.  **Transformations Structurelles**
+### ⊚ 8.  **Compositions Multiplicatives**
+### ⊚ 9.  **Partitions Additives et Décompositions**
+### ⊚ 10.  **Structures Nexus & Cascades Dimensionnelles**
+### ⊚ 11.  **Convolutions et Opérateurs Séquentiels**
+
+
+##############################################
+#          ✦ Note Méthodologique ✦           #
+##############################################
+
+**Structure du document**
+Ce lexique présente un système symbolique unifié pour explorer les familles de nombres figurés, les identités combinatoires et les relations structurales issues des tresses, orbites, partitions et cribles.
+
+**Clés de lecture**
+• Chaque symbole (ex. ◬ₙ, 🧊ₙ, ⬟ₙ) représente une famille bien définie de formes numériques.
+• Les relations sont regroupées en segments thématiques (⊚) : construction, connexions, transformations, etc.
+• Les notations respectent une cohérence entre texte, formule et icône pour faciliter la navigation visuelle et mathématique.
+
+**Conseils d’usage**
+Ce document peut être parcouru **horizontalement** (par type de relation) ou **verticalement** (par famille figurée). Il sert autant de référence formelle que de point de départ pour des expérimentations algébriques ou visuelles.
+
+
+
+
+🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+🌐🌐🌐 Symboles Unicode et leur rôle combinatoire 🌐🌐🌐
+🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
+
+
+
+❶ Séquences basic
+  ___________________________________________________________________________________________________________________________________________________
+ |   Nom_du_symbole     Symbole   Code_Unicode   Catégorie                       Description                                     Exemple             
+ |___________________________________________________________________________________________________________________________________________________
+ |   zero_sequence       𝟘        U+1D7D8        Séquence                        Séquence nulle                                (0,0,0,…)             
+ |   unit_sequence       𝟙        U+1D7D9        Séquence                        Suite des uns                                  (1,1,1,…)            
+ |   positive_filter     ▻        U+25B3         Fonction indicatrice           Fonction caractéristique de ℕ*                χ(n>0)                 
+ |   nat_set             𝕟        U+1D55F        Ensemble ℕ                      Nombres entiers naturels                      ℕ = {0,1,2,…}         
+ |   nat_pos_set         𝕟*       —             Ensemble ℕ*                     Nombres entiers positifs                      ℕ* = {1,2,…}           
+ |___________________________________________________________________________________________________________________________________________________
+
+❷ Nombres figurés 2D (polygonaux)                                                                                                                   
+  ___________________________________________________________________________________________________________________________________________________
+ |   Nom_du_symbole     Symbole   Code_Unicode   Catégorie                       Description                                     Exemple             
+ |___________________________________________________________________________________________________________________________________________________
+ |    polygonal_k         ⭐        U+2B50         Nombres polygonaux             k-gonaux généralisés                          P(k,n)               
+ |    triangular_number   Δ        U+2206         Nombres figurés 2D             Nombres triangulaires                         Δₙ = n(n+1)/2         
+ |    square_number       □        U+25A1         Nombres figurés 2D             Nombres carrés                                □ₙ = n²               
+ |    pentagonal_number   ⬠        U+2B20         Nombres figurés 2D             Nombres pentagonaux                           ⬠ₙ = (3n²−n)/2       
+ |    hexagonal_number    ⬡        U+2B21         Nombres figurés 2D             Nombres hexagonaux                            ⬡ₙ = 2n²−n           
+ |___________________________________________________________________________________________________________________________________________________
+
+❸ Nombres figurés 2D centrés                                                                                                                        
+  ___________________________________________________________________________________________________________________________________________________
+ |    Nom_du_symbole     Symbole   Code_Unicode   Catégorie                       Description                                     Exemple            
+ |___________________________________________________________________________________________________________________________________________________
+ |    centered_polygonal  🌟       U+1F31F        Polygonaux centrés             Nombres centrés k-gonaux                      Cₖₙ = ?               
+ |    centered_triangle   ◬        U+25EC         Figurés centrés                Nombres triangulaires centrés                 ◬ₙ = 3n(n+1)/2 + 1    
+ |    centered_square     ⛋        U+26CB         Figurés centrés                Nombres carrés centrés                        ⛋ₙ = n² + (n−1)²     
+ |    centered_pentagonal ⬟        U+2B1F         Figurés centrés                Nombres pentagonaux centrés                   ⬟ₙ = ?               
+ |    centered_hexagonal  ⬢        U+2B22         Figurés centrés                Nombres hexagonaux centrés                    ⬢ₙ = 3n(n−1)+1       
+ |    centered_heptagonal ⌂        U+2310         Figurés centrés                Heptagonaux centrés en grappe pentagonale     ⌂ₙ = ?                
+ |___________________________________________________________________________________________________________________________________________________
+
+❹ Nombres figurés autres 2D                                                                                                                         
+  ___________________________________________________________________________________________________________________________________________________
+ |    Nom_du_symbole     Symbole   Code_Unicode   Catégorie                       Description                                     Exemple            
+ |___________________________________________________________________________________________________________________________________________________
+ |    pentagonal_2nd      ⭔        U+2B50         Polygonaux spéciaux            Pentagonaux du second ordre                   (3n²+n)/2             
+ |    pentagonal_gen      ⬠⭔       —             Polygonaux spéciaux            Pentagonaux généralisés                       Formule à définir     
+ |___________________________________________________________________________________________________________________________________________________
+
+❺ Nombres figurés 3D                                                                                                                                
+  ___________________________________________________________________________________________________________________________________________________
+ |    Nom_du_symbole     Symbole   Code_Unicode   Catégorie                       Description                                     Exemple            
+ |___________________________________________________________________________________________________________________________________________________
+ |    tetrahedral_number  ◭        U+25ED         Figurés 3D                     Nombres tétraédriques                         ◭ₙ = n(n+1)(n+2)/6    
+ |    stellaoctangula     🟍        U+1F78D        Figurés 3D                     Octangle étoilé                               Formule spécifique   
+ |    cubic_number        ⏹        U+23F9         Figurés 3D                     Nombres cubiques                              ⏹ₙ = n³            
+ |___________________________________________________________________________________________________________________________________________________
+
+❻ Nombres figurés multidimensionnels                                                                                                                
+  ___________________________________________________________________________________________________________________________________________________
+ |   Nom_du_symbole     Symbole   Code_Unicode   Catégorie                       Description                                     Exemple             
+ |___________________________________________________________________________________________________________________________________________________
+ |   simplex_number      ☣        U+2623         Simplexes                      Tétraédriques généralisés (n-simplexes)       T⁽ⁿ⁾ₖ = ?              
+ |   hypercube_number    🧊        U+1F9CA        Hypercubes                     Nombres hypercubiques (puissances)            🧊ₙ = n^d            
+ |   nexus_number        ❅        U+2745         Différences de puissances      Nexus : Δ(n^k) − Δ((n−1)^k)                   ❅ₙ = ?                 
+ |___________________________________________________________________________________________________________________________________________________
 
 
 ═══════════════════════════════════════════════
@@ -286,146 +392,199 @@ Index :
 	• (d=4 → ❅₅) : 1, 31, 211, 781, 2101, 4651, 9031, ... (A006332)
 
 
-═══════════════════════════════════════════════
-📝 Notes méthodologiques
-═══════════════════════════════════════════════
-• Les formules de récurrence sont données sous forme : condition initiale, puis relation de récurrence
-• Les généralisations multidimensionnelles suivent une logique unifiée
-• Uniformisation de la notation des fonctions : T(n) pour triangulaires, etc.
-
-
 
 🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
 🌐🌐🌐 🔗 Relations d'interconnexion généralisées 🌐🌐🌐
 🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐
 
-Relations de Symétrie Duale
+
+
+═══════════════════════════════════════════════
+### ⊚ 1.  **Dualités et Symétries fondamentales**
+═══════════════════════════════════════════════
+
+* Relations de symétrie duale
 	Dualité triangle-hexagone : 2Δₙ = ⬡ₙ - n(n-1)
 	Symétrie carré-pentagonale : □ₙ + ⬠ₙ = n(5n-1)/2
 	Inversion stella-centrée : 🟍ₙ × ◬ₙ = n²(2n²-1)(3n-1)/2
-
-Identités de Crible Modulaire
-	Δₙ ≡ 0 ou 1 (mod 3) selon n mod 6
-	⬠ₙ ≡ 0 ou 1 (mod 5) selon n mod 5
-	Pattern : les nombres figurés "criblent" selon leurs bases
-
-Crible de Génération par Séries (x ∈ ]−1,1[)
-	Série triangulaire : Σ(n=1 à ∞) Δₙxⁿ = x/(1-x)³
-	Série tétraédrique : Σ(n=1 à ∞) ◭ₙxⁿ = x/(1-x)⁴
-	Série stella : Σ(n=1 à ∞) 🟍ₙxⁿ = x(1+x²)/(1-x)⁴
-
-Relations Triangulaires Centrées Avancées
-	Décomposition additive : ◬ₙ = Δₙ + Δₙ₋₁ + Δₙ₋₂
-	Réseau de transitions : ◬ₙ ⟷ réseau de transitions de ⬢ₙ³ (structure cubique)
-
-Relations de Parité Cachées
-	Alternance triangulaire-carrée : Δₙ + □ₙ ≡ n(3n+1)/2 (mod 2)
-	Crible pentagonal-centré : ⬠ₙ + ◬ₙ ≡ 1 (mod 4) si n impair
-	Pattern hexagonal : ⬡ₙ ≡ Δₙ (mod 3) pour tout n
-
-Relations de Récurrence Croisées
-	Tétraédrique-Triangulaire : ◭ₙ = ◭ₙ₋₁ + Δₙ
-	Pentagonal-Triangulaire : ⬠ₙ = ⬠ₙ₋₁ + (3n-1)
-	Nexus-Hexagone : ⬢ₙ = ⬢ₙ₋₁ + ❅₁(n)
-
-Tresse Stella-Tétraédrique
-	Décomposition : 🟍ₙ = 2◭ₙ - n
-	Relation inverse : ◭ₙ = (🟍ₙ + n)/2
-	Structure : entrelacement de deux tétraèdres
-
-Structure de Tresse Pentagonale-Hexagonale
-	Relation croisée : ⬠ₙ + ⬡ₙ = n(5n-2)
-	Tresse centrée : ⬟ₙ - ⬢ₙ = (n-1)(5n-3)/2
-	Motif : alternance entre structures pentagonales et hexagonales
-
-Relations Delannoy-Simplexes
-	Connexion triangulaire : ☣ₙ = Σₖ₌₀ⁿ Δₖ · 2ⁿ⁻ᵏ
-	Relation tétraédrique : certains ☣ₙ sont sommes de ◭ₖ
-
-Tresse Delannoy-Figurée Complexe
-	Connexion tétraédrique : ☣ₙ = Σ(k=0 à n) ◭ₖ × fₙ₋ₖ où fₖ = Fibonacci(k)
-	Relation stella-Delannoy : ☣ₙ² - 🟍ₙ = Σ(k=1 à n) k×Δₖ
-	Identité cachée : 3☣ₙ = 2⬢ₙ + ◭ₙ + Δₙ²
-
-Crible de Récurrence Croisée Avancée
-	Triangle-tétraèdre-cube : ◭ₙ₊₁ = ◭ₙ + Δₙ₊₁ = ◭ₙ + (⏹ₙ₊₁ - ⏹ₙ)^{⅓}
-	Pentagonal-stella : 🟍ₙ₊₁ - 🟍ₙ = 6n² + 1 = ⬠₂ₙ₊₁ - ⬠₂ₙ
-	Nexus-Delannoy : ⬢ₙ₊₁ - ⬢ₙ = 6n = ☣ₙ - ☣ₙ₋₁ pour n carré parfait
-
-Identités de Transformation Modulaire
-	Transformation cubique-triangulaire : ⏹ₙ ≡ Δₙ² (mod n+1)
-	Crible stella-tétraédrique : 🟍ₙ ≡ 2◭ₙ - n (mod 6)
-	Pattern Delannoy : ☣ₙ ≡ 2ⁿ (mod n!) pour n≤5
-
-Relations de Carré-Triangle (Crible fondamental)
+* Transformations duales avancées
+	Inversion dimension-centrée : ⏹_n × ◬_n = polynomial de degré 5 (pattern à explorer)
+	Conjugaison pentagonale-hexagonale : ⬠_n + ⬡_{n-1} = expression en Δ_n
+	Symétrie stella-simplexe : 🟍_n ↔ ☣_n via transformation linéaire
+* Relations de Carré-Triangle
 	Nombres triangulaires au carré : Σ(k=1 à n) ⏹ₖ = (Δₙ)²
 	Nombres carrés-triangulaires : □ₙ = Δₘ ⟺ x² - 8y² = 1 avec (x,y) = (n,m)
 	Solution : (n,m) = (1,1), (8,36), (49,1225), ... (suite de Pell)
 
-Tresse Tétraédrique-Cubique Avancée
-	Identité de cube-tétraèdre : ⏹ₙ = 6◭ₙ - 3Δₙ + n
-	Relation inverse : ◭ₙ = (⏹ₙ + 3Δₙ − n)/6
-	Structure : chaque cube contient exactement 6 tétraèdres moins correction triangulaire
+═══════════════════════════════════════════════
+### ⊚ 2.  **Cribles Modulaires et Parités**
+═══════════════════════════════════════════════
 
-Transformations Duales Avancées
-	Inversion dimension-centrée : ⏹_n × ◬_n = polynomial de degré 5 (pattern à explorer)
-	Conjugaison pentagonale-hexagonale : ⬠_n + ⬡_{n-1} = expression en Δ_n
-	Symétrie stella-simplexe : 🟍_n ↔ ☣_n via transformation linéaire
-
-Relations Hypergéométriques
-	Connexions avec les fonctions hypergéométriques : Beaucoup de vos nombres figurés sont des cas particuliers de p​Fq​
-	Identités de Ramanujan étendues : Relations entre sommes infinies de nombres figurés
-	Generating functions multivariées : Σ ⭐_k(n) x^n y^k
-
-Relations de Parité Généralisées, le crible modulaire s'étend :
+* Identités de crible modulaire
+	Δₙ ≡ 0 ou 1 (mod 3) selon n mod 6
+	⬠ₙ ≡ 0 ou 1 (mod 5) selon n mod 5
+	Pattern : les nombres figurés "criblent" selon leurs bases
+* Relations de parité cachées
+	Alternance triangulaire-carrée : Δₙ + □ₙ ≡ n(3n+1)/2 (mod 2)
+	Crible pentagonal-centré : ⬠ₙ + ◬ₙ ≡ 1 (mod 4) si n impair
+	Pattern hexagonal : ⬡ₙ ≡ Δₙ (mod 3) pour tout n
+* Relations de parité généralisées
 	Théorème de parité k-gonale : ⭐_k(n) ≡ f_k(n mod k) où f_k suit un pattern cyclique
 	Relation de Lucas généralisée : Les nombres centrés semblent hériter des propriétés modulaires de leurs bases
 	Crible de Fermat figuré : ⭐_p(n) ≡ ⭐_p(n mod p) (mod p) pour p premier
-
-Relations de Croissance Fractionnaire
-	Interpolation figurée : Relations entre ⭐_k(n) et ⭐_{k+0.5}(n) via fonctions continues
-	Asymptotiques croisées : lim(n→∞) ⭐_j(n)/⭐_k(n) révèle des constantes universelles
-	Scaling laws : ⭐_k(λn) = λ^2 ⭐_k(n) + corrections d'ordre inférieur
-
-Structure de Cube-Centrée Généralisée
-	Cube-étoile généralisée : ⏹ₙ = 🌟ₖ,ₙ + kn(n²-1)/3 pour k≥3
-	Décomposition multi-centrée : Σ(k=3 à 8) 🌟ₖ,ₙ = 21n(n-1) + 6
-	Relation inverse : 🌟ₖ,ₙ = ⏹ₙ - kn(n²-1)/3 (valable seulement pour certains k)
-
-Crible de Généralisation Centrée
+* Crible de généralisation centrée
 	Triangle centré (k=3) : 🌟₃,ₙ = ◬ₙ = 1 + 3n(n−1)/2 = 3Δₙ₋₁ + 1
 	Carré centré (k=4) : 🌟₄,ₙ = ⛋ₙ = 1 + 4n(n-1)/2 = 2n² - 2n + 1
 	Pentagone centré : 🌟₅,ₙ = ⬟ₙ
 	Hexagone centré : 🌟₆,ₙ = ⬢ₙ
 
-Crible de Stella-Centrée Généralisée
-	Décomposition stella-étoile : 🟍ₙ = 🌟₆,ₙ + (n³ - 3n²)/2
-	Relation nexus-stella : ⬢ₙ × 🟍ₙ = n²(3n-1)(2n²-1)
-	Identité croisée : 2🟍ₙ - ⬢ₙ = n(4n² - 3n + 1)
+═══════════════════════════════════════════════
+### ⊚ 3.  **Relations Séries et Génératrices**
+═══════════════════════════════════════════════
 
-Relations de Composition Multiplicative
-	Produit triangle-carré : Δₙ × □ₙ = n²(n+1)²/4 = (n(n+1))²/4
-	Composition stella-nexus : 🟍ₙ × ⬢ₙ = 3n²(2n²-1)(n-1)
-	Factorisation centrée : 🌟ₖ,ₙ × 🌟ⱼ,ₙ = n²(n-1)²(k+j)/4 + O(n³)
-
-Relations de Convergence Asymptotique
+* Crible de génération par séries
+	Série triangulaire : Σ(n=1 à ∞) Δₙxⁿ = x/(1-x)³
+	Série tétraédrique : Σ(n=1 à ∞) ◭ₙxⁿ = x/(1-x)⁴
+	Série stella : Σ(n=1 à ∞) 🟍ₙxⁿ = x(1+x²)/(1-x)⁴
+* Relations hypergéométriques
+	Connexions avec les fonctions hypergéométriques : Beaucoup de vos nombres figurés sont des cas particuliers de p​Fq​
+	Identités de Ramanujan étendues : Relations entre sommes infinies de nombres figurés
+	Generating functions multivariées : Σ ⭐_k(n) x^n y^k
+* Relations de convergence asymptotique
 	Ratio triangle-cube : lim(n→∞) Δₙ/⏹ₙ = 0 (ordre O(1/n))
 	Convergence stella-tétraédrique : lim(n→∞) 🟍ₙ/◭ₙ = 2
 	Asymptote Delannoy-centrée : lim(n→∞) ☣ₙ/🌟₆,ₙ=4ⁿ/(3n) → valable seulement pour n≫1
 
-Identités de Partition Additives
+═══════════════════════════════════════════════
+### ⊚ 4.  **Récurrences et Croissances croisées**
+═══════════════════════════════════════════════
+
+* Relations de récurrence croisées
+	Tétraédrique-Triangulaire : ◭ₙ = ◭ₙ₋₁ + Δₙ
+	Pentagonal-Triangulaire : ⬠ₙ = ⬠ₙ₋₁ + (3n-1)
+	Nexus-Hexagone : ⬢ₙ = ⬢ₙ₋₁ + ❅₁(n)
+* Crible de récurrence croisée avancée
+	Triangle-tétraèdre-cube : ◭ₙ₊₁ = ◭ₙ + Δₙ₊₁ = ◭ₙ + (⏹ₙ₊₁ - ⏹ₙ)^{⅓}
+	Pentagonal-stella : 🟍ₙ₊₁ - 🟍ₙ = 6n² + 1 = ⬠₂ₙ₊₁ - ⬠₂ₙ
+	Nexus-Delannoy : ⬢ₙ₊₁ - ⬢ₙ = 6n = ☣ₙ - ☣ₙ₋₁ pour n carré parfait
+* Relations de croissance fractionnaire
+	Interpolation figurée : Relations entre ⭐_k(n) et ⭐_{k+0.5}(n) via fonctions continues
+	Asymptotiques croisées : lim(n→∞) ⭐_j(n)/⭐_k(n) révèle des constantes universelles
+	Scaling laws : ⭐_k(λn) = λ^2 ⭐_k(n) + corrections d'ordre inférieur
+
+═══════════════════════════════════════════════
+### ⊚ 5.  **Tresses et Enchevêtrements dimensionnels**
+═══════════════════════════════════════════════
+
+* Crible de Stella-Centrée Généralisée
+	Identité croisée : 2🟍ₙ - ⬢ₙ = n(4n² - 3n + 1)
+* Tresse stella-tétraédrique
+	Décomposition : 🟍ₙ = 2◭ₙ - n
+	Relation inverse : ◭ₙ = (🟍ₙ + n)/2
+	Structure : entrelacement de deux tétraèdres
+* Structure de tresse pentagonale-hexagonale
+	Relation croisée : ⬠ₙ + ⬡ₙ = n(5n-2)
+	Tresse centrée : ⬟ₙ - ⬢ₙ = (n-1)(5n-3)/2
+	Motif : alternance entre structures pentagonales et hexagonales
+* Tresse tétraédrique-cubique avancée
+	Identité de cube-tétraèdre : ⏹ₙ = 6◭ₙ - 3Δₙ + n
+	Relation inverse : ◭ₙ = (⏹ₙ + 3Δₙ − n)/6
+	Structure : chaque cube contient exactement 6 tétraèdres moins correction triangulaire
+* Tresse Delannoy-figurée complexe
+	Connexion tétraédrique : ☣ₙ = Σ(k=0 à n) ◭ₖ × fₙ₋ₖ où fₖ = Fibonacci(k)
+	Relation stella-Delannoy : ☣ₙ² - 🟍ₙ = Σ(k=1 à n) k×Δₖ
+	Identité cachée : 3☣ₙ = 2⬢ₙ + ◭ₙ + Δₙ²
+
+═══════════════════════════════════════════════
+### ⊚ 6.  **Connexions Delannoy et Simplexes**
+═══════════════════════════════════════════════
+
+* Relations Delannoy-simplexes
+	Connexion triangulaire : ☣ₙ = Σₖ₌₀ⁿ Δₖ · 2ⁿ⁻ᵏ
+	Relation tétraédrique : certains ☣ₙ sont sommes de ◭ₖ
+* Identité nexus-stella
+	Produit croisé entre nombres hexagonaux ⬢ₙ et stella-octangula 🟍ₙ :
+	⬢ₙ × 🟍ₙ = n²(3n−1)(2n²−1)
+	Ce lien encode une structure rayonnée cubique ancrée dans ℕ³, reliant volumes figurés et cribles réguliers.
+* Pattern Delannoy modulaire
+	Suite Delannoy centrée ⟐ₙ étudiée modulo k ∈ ℕ⁺ :
+	Ex.	⟐ₙ mod 3 ∈ {0, 1, 1, 0, 2, 2, ...}
+	Met en évidence des orbites modulaires ou régularités en classes résiduelles,
+	indiquant des symétries cachées dans les treillis combinatoires.
+
+═══════════════════════════════════════════════
+### ⊚ 7.  **Transformations Structurelles**
+═══════════════════════════════════════════════
+
+* Identités de transformation modulaire
+	Transformation cubique-triangulaire : ⏹ₙ ≡ Δₙ² (mod n+1)
+	Crible stella-tétraédrique : 🟍ₙ ≡ 2◭ₙ - n (mod 6)
+	Pattern Delannoy : ☣ₙ ≡ 2ⁿ (mod n!) pour n≤5
+* Structure de cube-centrée généralisée
+	Cube-étoile généralisée : ⏹ₙ = 🌟ₖ,ₙ + kn(n²-1)/3 pour k≥3
+	Décomposition multi-centrée : Σ(k=3 à 8) 🌟ₖ,ₙ = 21n(n-1) + 6
+	Relation inverse : 🌟ₖ,ₙ = ⏹ₙ - kn(n²-1)/3 (valable seulement pour certains k)
+* Transformations duales avancées
+	  Relations bijectives ou réciproques entre familles :
+	Δₙ ⇄ ◬ₙ (triangulaire ↔ triangulaire centré)
+	□ₙ ⇄ ⛋ₙ (carré ↔ carré centré)
+	🧊ₙ ⇄ ◭ₙ (cube ↔ tétraèdre)
+	  Ces mutations traduisent des symétries internes entre configurations planes et solides.
+* Cribles par miroir ou inversion
+	  Définition d’une involution géométrique :
+	⬟ₙ ↔ ⬟₋ₙ		(pentagonal centré miroir)
+	  Appliquée sur l’indexation ou la géométrie, elle révèle des formes réversibles et une structure
+	  cyclique implicite dans les séries figurées.
+
+═══════════════════════════════════════════════
+### ⊚ 8.  **Compositions Multiplicatives**
+═══════════════════════════════════════════════
+
+* Crible de stella-centrée généralisée
+	Relation nexus-stella : ⬢ₙ × 🟍ₙ = n²(3n-1)(2n²-1)
+* Produit triangle-carré
+	Produit triangle-carré : Δₙ × □ₙ = n²(n+1)²/4 = (n(n+1))²/4
+* Composition stella-nexus
+	Composition stella-nexus : 🟍ₙ × ⬢ₙ = 3n²(2n²-1)(n-1)
+* Factorisation centrée
+	Factorisation centrée : 🌟ₖ,ₙ × 🌟ⱼ,ₙ = n²(n-1)²(k+j)/4 + O(n³)
+
+═══════════════════════════════════════════════
+### ⊚ 9.  **Partitions Additives et Décompositions**
+═══════════════════════════════════════════════
+
+* Crible de stella-centrée généralisée
+	Décomposition stella-étoile : 🟍ₙ = 🌟₆,ₙ + (n³ - 3n²)/2
+* Relations triangulaires centrées avancées
+	Décomposition additive : ◬ₙ = Δₙ + Δₙ₋₁ + Δₙ₋₂
+* Identités de partition additives
 	Décomposition triangle : tout entier = Σᵢ εᵢ×Δᵢ où εᵢ ∈ {0,1,2}
-	Partition tétraédrique : certains entiers = somme de ≤5 nombres ◭ₙ
 	Structure centrée : 🌟ₖ,ₙ partitionne les entiers selon classe mod k
 	Base pour partitions/Ferrers à développer (Peut s'ouvrir vers les polyominoes ou partitions de Ferrers)
+* Partition tétraédrique
+	Partition tétraédrique : certains entiers = somme de ≤5 nombres ◭ₙ
+* Décompositions multi-centrées
 
-Relations Nexus-Centrées (❅)
-Les nombres Nexus ❅_d(n) = (n+1)^d - n^d semblent être un pont naturel entre dimensions :
-	Relation de cascade dimensionnelle : ❅_d(n) = Σ(k=0 à d-1) C(d,k) × n^k
-	Connexion avec les centrés : 🌟_k,n = 1 + k × ❅_1(n-1) × n/2
+═══════════════════════════════════════════════
+### ⊚ 10.  **Structures Nexus & Cascades Dimensionnelles**
+═══════════════════════════════════════════════
+
+* Relations Triangulaires Centrées
+	Réseau de transitions : ◬ₙ ⟷ réseau de transitions de ⬢ₙ³ (structure cubique)
+* Relations Nexus-centrées ❅_d(n) = (n+1)^d - n^d semblent être un pont naturel entre dimensions :
 	Identité nexus-stella : 🟍_n = ❅_3(n) + ❅_1(n) (à vérifier)
+* Cascade dimensionnelle
+	Relation de cascade dimensionnelle : ❅_d(n) = Σ(k=0 à d-1) C(d,k) × n^k
+* Connexion nexus-centré généralisée
+	Connexion avec les centrés : 🌟_k,n = 1 + k × ❅_1(n-1) × n/2
 
-Structures de Convolution
-	Produit de Hadamard figuré : (⭐_j * ⭐_k)(n) = Σ ⭐_j(i) × ⭐_k(n-i)
+═══════════════════════════════════════════════
+### ⊚ 11.  **Convolutions et Opérateurs Séquentiels**
+═══════════════════════════════════════════════
+
+* Structures de convolution
 	Convolution centrée-polygonale : (🌟_j * ⭐_k)(n) génère de nouvelles séquences
+* Produit de Hadamard figuré
+	Produit de Hadamard figuré : (⭐_j * ⭐_k)(n) = Σ ⭐_j(i) × ⭐_k(n-i)
+* Transformée de Fourier discrète
 	Transform de Fourier discrète des séquences figurées
